@@ -1,0 +1,75 @@
+{
+    "name": "Mapbox",
+    "description": "<p>Mapbox is a one of the biggest providers of custom online maps for major websites such as Foursquare, Pinterest, Evernote, the Financial Times and Uber Technologies. Since 2010, it has rapidly expanded the niche of custom maps, as a response to the limited choice offered by map providers such as Google Maps. Mapbox is the creator of, or a significant contributor to many popular open source mapping libraries and applications, including the MBTiles specification, the TileMill cartography IDE, the Leaflet JavaScript library, the CartoCSS map styling language and parser, and the mapbox.js JavaScript library.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/mapbox-logo-256.png",
+    "tags": [
+        "api provider",
+        "geo",
+        "have api",
+        "maps",
+        "target"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/mapbox\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Mapbox",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/mapbox-logo-256.png",
+            "humanURL": "https:\/\/www.mapbox.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/mapbox-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/mapbox-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/api.tiles.mapbox.com"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.mapbox.com\/blog\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/www.mapbox.com\/blog\/blog.rss"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.mapbox.com\/developers\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/mapbox"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.mapbox.com\/pricing\/"
+        },
+        {
+            "type": "Transparency Report",
+            "url": "https:\/\/www.mapbox.com\/blog\/mapbox-transparency-report"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/mapbox"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.mapbox.com\/"
+        }
+    ]
+}
