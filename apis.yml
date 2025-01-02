@@ -7,10 +7,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
         type: Documentation
-    description: >-
+    description: |-
+
       Mapbox Tiling Service (MTS) is a tool for creating vector tilesets. With
       MTS, you use sets of configuration options (tileset recipes) to transform
       your geospatial data into vector tiles. The resulting tiles are hosted on
@@ -21,10 +23,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/vector-tiles/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/vector-tiles/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector
       tilesets.
   - aid: mapbox:mapbox-raster-tiles-api
@@ -33,10 +37,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/raster-tiles/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/raster-tiles/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Raster Tiles API serves raster tiles generated from satellite
       imagery tilesets and tilesets generated from raster data uploaded to
       Mapbox.com.
@@ -46,10 +52,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/static-images/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/static-images/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Static Images API serves standalone, static map images
       generated from Mapbox Studio styles. These images can be displayed on web
       and mobile devices without the aid of a mapping library or API. They look
@@ -60,10 +68,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/static-tiles/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/static-tiles/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Static Tiles API serves raster tiles generated from Mapbox
       Studio styles. Raster tiles can be used in traditional web mapping
       libraries like Mapbox.js, Leaflet, OpenLayers, and others to create
@@ -75,10 +85,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/styles/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/styles/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Styles API lets you read and change map styles, fonts, and
       images. This API is the basis for Mapbox Studio. If you use Studio, Mapbox
       GL JS, or the Mapbox Mobile SDKs, you are already using the Styles API.
@@ -95,10 +107,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/tilequery/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/tilequery/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Tilequery API allows you to retrieve data about specific
       features from a vector tileset, based on a given latitude and longitude.
       The Tilequery API makes it possible to query for features within a radius,
@@ -110,10 +124,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/uploads/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/uploads/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Uploads API transforms geographic data into tilesets that can
       be used with maps and geographic applications. Given a wide variety of
       geospatial formats, it normalizes projections and generates tiles at
@@ -124,10 +140,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
         type: Documentation
-    description: >-
+    description: |-
+
       Mapbox Tiling Service (MTS) is a tool for creating vector tilesets. With
       MTS, you use sets of configuration options (tileset recipes) to transform
       your geospatial data into vector tiles. The resulting tiles are hosted on
@@ -138,10 +156,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/datasets/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/datasets/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Datasets API supports reading, creating, updating, and removing
       features from a dataset. Using the Datasets API involves interacting with
       two types of objects: datasets and features. Datasets contain one or more
@@ -155,10 +175,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/fonts/
+    overlays: []
     properties:
       - url: https://docs.mapbox.com/api/maps/fonts/
         type: Documentation
-    description: >-
+    description: |-
+
       The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts
       to be deleted, and generates encoded letters for map renderers. Two types
       of fonts are supported: TrueType fonts, usually with .ttf file extensions,
@@ -168,7 +190,9 @@ name: Mapbox
 tags:
   - Maps
   - Mapping
+type: Contract
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
 common:
   - url: https://docs.mapbox.com/help/
     type: Support
@@ -207,8 +231,9 @@ common:
   - url: https://docs.mapbox.com/help/glossary
     type: Glossay
 created: 2023/11/22
-modified: '2024-11-14'
-description: >-
+modified: '2025-01-01'
+position: Consuming
+description: |-
   Mapbox is a living platform of location services. We equip innovators to keep
   up with a changing world through using real-time data and map rendering
   technologies that make it look easy. 
@@ -217,6 +242,3 @@ maintainers:
     url: http://apievangelist.com
     email: info@apievangelist.com
 specificationVersion: '0.16'
-type: Index
-position: Consumer
-access: 3rd-Party
