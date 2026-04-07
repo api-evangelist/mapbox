@@ -4,8 +4,7 @@ apis:
   - aid: mapbox:mapbox-tiling-service
     name: Mapbox Tiling Service
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
     overlays: []
@@ -20,8 +19,7 @@ apis:
   - aid: mapbox:vector-tiles-api
     name: Mapbox Vector Tiles API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/vector-tiles/
     overlays: []
@@ -33,8 +31,7 @@ apis:
   - aid: mapbox:mapbox-raster-tiles-api
     name: Mapbox Raster Tiles API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/raster-tiles/
     overlays: []
@@ -47,8 +44,7 @@ apis:
   - aid: mapbox:mapbox-static-images-api
     name: Mapbox Static Images API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/static-images/
     overlays: []
@@ -63,8 +59,7 @@ apis:
   - aid: mapbox:mapbox-static-tiles-api
     name: Mapbox Static Tiles API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/static-tiles/
     overlays: []
@@ -80,8 +75,7 @@ apis:
   - aid: mapbox:mapbox-styles-api
     name: Mapbox Styles API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/styles/
     overlays: []
@@ -98,8 +92,7 @@ apis:
   - aid: mapbox:mapbox-tilequery-api
     name: Mapbox Tilequery API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/tilequery/
     overlays: []
@@ -115,8 +108,7 @@ apis:
   - aid: mapbox:mapbox-uploads-api
     name: Mapbox Uploads API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/uploads/
     overlays: []
@@ -131,8 +123,7 @@ apis:
   - aid: mapbox:mapbox-tiling-service-mts
     name: Mapbox Tiling Service (MTS)
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
     overlays: []
@@ -147,8 +138,7 @@ apis:
   - aid: mapbox:mapbox-datasets-api
     name: Mapbox Datasets API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/datasets/
     overlays: []
@@ -165,8 +155,7 @@ apis:
   - aid: mapbox:mapbox-fonts-api
     name: Mapbox Fonts API
     tags: []
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.mapbox.com/api/maps/fonts/
     overlays: []
@@ -181,11 +170,10 @@ apis:
       can use any font from the same account.
 name: Mapbox
 tags:
-  - Maps
   - Mapping
+  - Maps
 type: Contract
-image: 
-  https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
   - url: https://docs.mapbox.com/help/
