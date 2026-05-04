@@ -1,0 +1,53 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Mapbox
+providerId: mapbox
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Maps
+description: Mapbox enforces per-token, per-endpoint rate limits. Defaults vary; raise via support.
+sources:
+  - https://www.mapbox.com/pricing
+  - https://docs.mapbox.com/api/overview/#rate-limits
+headers:
+  limit: X-Rate-Limit-Limit
+  remaining: X-Rate-Limit-Remaining
+  reset: X-Rate-Limit-Reset
+  interval: X-Rate-Limit-Interval
+responseCodes:
+  throttled: 429
+limits:
+  - name: Geocoding API
+    scope: token
+    metric: requests_per_minute
+    limit: 600
+    timeFrame: minute
+  - name: Directions API
+    scope: token
+    metric: requests_per_minute
+    limit: 300
+    timeFrame: minute
+  - name: Matrix API
+    scope: token
+    metric: requests_per_minute
+    limit: 60
+    timeFrame: minute
+  - name: Map Matching API
+    scope: token
+    metric: requests_per_minute
+    limit: 60
+    timeFrame: minute
+  - name: Static Images API
+    scope: token
+    metric: requests_per_minute
+    limit: 1250
+    timeFrame: minute
+  - name: Tilequery API
+    scope: token
+    metric: requests_per_minute
+    limit: 600
+    timeFrame: minute

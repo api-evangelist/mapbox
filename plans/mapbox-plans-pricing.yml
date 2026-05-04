@@ -1,0 +1,234 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Mapbox
+providerId: mapbox
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Maps
+  - Geocoding
+  - Navigation
+  - Location
+description: Mapbox is per-API-product priced. Each API has its own free allocation and per-1k-request
+  rate; volume discounts kick in at scale.
+sources:
+  - https://www.mapbox.com/pricing
+plans:
+  - id: mapbox-maps-mobile
+    name: Maps SDKs for Mobile
+    type: metered
+    description: Free up to 25k MAUs; $4.00 per 1k MAUs above.
+    entries:
+      - label: Free MAU allocation
+        name: free_mau
+        type: quota
+        metric: MAU
+        limit: 25000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k MAUs above free
+        name: extra_mau
+        type: metered
+        metric: MAU
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '4.00'
+        userMultiplied: false
+    elements:
+      - name: Android and iOS SDKs
+      - name: Dynamic rendering
+      - name: Unlimited tiles per user
+  - id: mapbox-gl-js
+    name: Mapbox GL JS Map Loads
+    type: metered
+    description: Free up to 50k loads/month; $5.00 per 1k loads above.
+    entries:
+      - label: Free loads
+        name: free_loads
+        type: quota
+        metric: load
+        limit: 50000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k loads above free
+        name: extra_loads
+        type: metered
+        metric: load
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '5.00'
+        userMultiplied: false
+    elements:
+      - name: Vector maps for web
+      - name: Real-time styling
+      - name: Unlimited interactivity
+  - id: mapbox-static
+    name: Static Images API
+    type: metered
+    description: Free up to 50k requests/month; $1.00 per 1k above.
+    entries:
+      - label: Free requests
+        name: free_req
+        type: quota
+        metric: request
+        limit: 50000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k above free
+        name: extra_req
+        type: metered
+        metric: request
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '1.00'
+        userMultiplied: false
+    elements:
+      - name: Static map PNGs
+      - name: Customizable height/width
+  - id: mapbox-directions
+    name: Directions API
+    type: metered
+    description: Free up to 100k requests/month; $2.00 per 1k above.
+    entries:
+      - label: Free requests
+        name: free_req
+        type: quota
+        metric: request
+        limit: 100000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k above free
+        name: extra_req
+        type: metered
+        metric: request
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '2.00'
+        userMultiplied: false
+    elements:
+      - name: Driving / walking / cycling
+      - name: Traffic and incident awareness
+  - id: mapbox-geocoding
+    name: Temporary Geocoding API
+    type: metered
+    description: Free up to 100k requests/month; $0.75 per 1k above.
+    entries:
+      - label: Free requests
+        name: free_req
+        type: quota
+        metric: request
+        limit: 100000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k above free
+        name: extra_req
+        type: metered
+        metric: request
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '0.75'
+        userMultiplied: false
+    elements:
+      - name: Forward and reverse geocoding
+      - name: Address and place search
+  - id: mapbox-search-box
+    name: Search Box API (Sessions)
+    type: metered
+    description: Free 0–500 sessions; $3.00 per 1k above. Each session = 50 suggest + 1 retrieve.
+    entries:
+      - label: Free sessions
+        name: free_sessions
+        type: quota
+        metric: session
+        limit: 500
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Per 1k above free
+        name: extra_sessions
+        type: metered
+        metric: session
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1000
+        price: '3.00'
+        userMultiplied: false
+    elements:
+      - name: Interactive POI/address search
+      - name: Per-session billing
+  - id: mapbox-navigation-metered
+    name: Navigation SDK v3 — Metered Trips
+    type: metered
+    description: $0.30 per MAU + $0.08 per trip; volume discounts.
+    entries:
+      - label: MAU
+        name: mau
+        type: metered
+        metric: MAU
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.30'
+        userMultiplied: false
+      - label: Per trip
+        name: trip
+        type: metered
+        metric: trip
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.08'
+        userMultiplied: false
+    elements:
+      - name: Active guidance
+      - name: Free-drive trips
+  - id: mapbox-navigation-unlimited
+    name: Navigation SDK v3 — Unlimited Trips
+    type: enterprise
+    description: Flat per-MAU fee with unlimited trips; contact sales.
+    entries:
+      - label: MAU (custom)
+        name: mau_custom
+        type: subscription
+        metric: MAU
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Free up to 10 MAUs
+      - name: Volume committed pricing
