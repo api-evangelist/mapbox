@@ -1,0 +1,380 @@
+openapi: 3.1.0
+info:
+  title: Mapbox Tiling Service API
+  description: >-
+    Minimal OpenAPI 3.1 specification for the Mapbox Tiling Service,
+    covering tileset sources, changesets, tilesets, jobs, recipes,
+    queue, validation, and activity endpoints.
+  version: 1.0.0
+x-generated-from: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://api.mapbox.com
+    description: Mapbox API
+paths:
+  /tilesets/v1/sources/{username}/{id}:
+    post:
+      operationId: createSource
+      summary: Create a tileset source
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Source created
+        default:
+          description: Error response
+    get:
+      operationId: getSource
+      summary: Retrieve tileset source information
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Source information
+        default:
+          description: Error response
+    put:
+      operationId: replaceSource
+      summary: Replace a tileset source
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Source replaced
+        default:
+          description: Error response
+    delete:
+      operationId: deleteSource
+      summary: Delete a tileset source
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Source deleted
+        default:
+          description: Error response
+  /tilesets/v1/sources/{username}:
+    get:
+      operationId: listSources
+      summary: List tileset sources for a user
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of sources
+        default:
+          description: Error response
+  /tilesets/v1/changesets/{username}/{id}:
+    post:
+      operationId: createChangeset
+      summary: Create a changeset
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Changeset created
+        default:
+          description: Error response
+    put:
+      operationId: replaceChangeset
+      summary: Replace a changeset
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Changeset replaced
+        default:
+          description: Error response
+    delete:
+      operationId: deleteChangeset
+      summary: Delete a changeset
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Changeset deleted
+        default:
+          description: Error response
+  /tilesets/v1/changesets/{username}:
+    get:
+      operationId: listChangesets
+      summary: List changesets for a user
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of changesets
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}:
+    post:
+      operationId: createTileset
+      summary: Create a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tileset created
+        default:
+          description: Error response
+    patch:
+      operationId: updateTileset
+      summary: Update a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tileset updated
+        default:
+          description: Error response
+    delete:
+      operationId: deleteTileset
+      summary: Delete a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Tileset deleted
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}/publish:
+    post:
+      operationId: publishTileset
+      summary: Publish a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Publish job started
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}/publish-changesets:
+    post:
+      operationId: publishChangesets
+      summary: Publish changesets for a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Publish job started
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}/jobs:
+    get:
+      operationId: listTilesetJobs
+      summary: List jobs for a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of jobs
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}/jobs/{job_id}:
+    get:
+      operationId: getTilesetJob
+      summary: Retrieve a tileset job
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: job_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Job details
+        default:
+          description: Error response
+  /tilesets/v1/queue:
+    put:
+      operationId: getQueueStatus
+      summary: Retrieve queue status
+      responses:
+        '200':
+          description: Queue status
+        default:
+          description: Error response
+  /tilesets/v1/validateRecipe:
+    put:
+      operationId: validateRecipe
+      summary: Validate a tileset recipe
+      responses:
+        '200':
+          description: Validation result
+        default:
+          description: Error response
+  /tilesets/v1/{tileset_id}/recipe:
+    get:
+      operationId: getTilesetRecipe
+      summary: Retrieve a tileset recipe
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Recipe document
+        default:
+          description: Error response
+    patch:
+      operationId: updateTilesetRecipe
+      summary: Update a tileset recipe
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Recipe updated
+        default:
+          description: Error response
+  /tilesets/v1/{username}:
+    get:
+      operationId: listTilesets
+      summary: List tilesets for a user
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of tilesets
+        default:
+          description: Error response
+  /v4/{tileset_id}.json:
+    get:
+      operationId: getTilesetTileJson
+      summary: Retrieve TileJSON for a tileset
+      parameters:
+        - name: tileset_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: TileJSON document
+        default:
+          description: Error response
+  /activity/v1/{username}/tilesets:
+    get:
+      operationId: getTilesetActivity
+      summary: Retrieve tileset activity for a user
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Activity report
+        default:
+          description: Error response
+components: {}
