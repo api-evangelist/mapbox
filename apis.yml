@@ -162,7 +162,7 @@ common:
     url: https://docs.mapbox.com/api/overview/#access-tokens-and-token-scopes
   - type: Versioning
     url: https://docs.mapbox.com/api/overview/#api-versioning
-  - type: Rate Limits
+  - type: RateLimits
     url: https://docs.mapbox.com/api/overview/#rate-limits
   - type: CORS
     url: https://docs.mapbox.com/api/overview/#https-and-cors
@@ -170,9 +170,9 @@ common:
     url: https://docs.mapbox.com/api/overview/#pagination
   - type: Login
     url: https://account.mapbox.com/auth/signin/
-  - type: Sign Up
+  - type: SignUp
     url: https://account.mapbox.com/auth/signup/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.mapbox.com/tos/
   - type: Privacy
     url: https://www.mapbox.com/privacy/
@@ -180,7 +180,7 @@ common:
     url: https://www.mapbox.com/platform/security/
   - type: Cheatsheet
     url: https://labs.mapbox.com/developer-cheatsheet/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.mapbox.com/help/getting-started
   - type: Tutorials
     url: https://docs.mapbox.com/help/tutorials
