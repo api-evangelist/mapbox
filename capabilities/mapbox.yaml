@@ -1,0 +1,952 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Mapbox Tiling Service API
+  description: 'Mapbox Tiling Service API. 23 operations. Lead operation: Retrieve tileset activity for a user. Self-contained
+    Naftiko capability covering one Mapbox business surface.'
+  tags:
+  - Mapbox
+  - Mapbox Tiling Service API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MAPBOX_API_KEY: MAPBOX_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: mapbox
+    baseUri: https://api.mapbox.com
+    description: Mapbox Tiling Service API business capability. Self-contained, no shared references.
+    resources:
+    - name: activity-v1-username-tilesets
+      path: /activity/v1/{username}/tilesets
+      operations:
+      - name: gettilesetactivity
+        method: GET
+        description: Retrieve tileset activity for a user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-changesets-username
+      path: /tilesets/v1/changesets/{username}
+      operations:
+      - name: listchangesets
+        method: GET
+        description: List changesets for a user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-changesets-username-id
+      path: /tilesets/v1/changesets/{username}/{id}
+      operations:
+      - name: createchangeset
+        method: POST
+        description: Create a changeset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+      - name: replacechangeset
+        method: PUT
+        description: Replace a changeset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+      - name: deletechangeset
+        method: DELETE
+        description: Delete a changeset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-queue
+      path: /tilesets/v1/queue
+      operations:
+      - name: getqueuestatus
+        method: PUT
+        description: Retrieve queue status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tilesets-v1-sources-username
+      path: /tilesets/v1/sources/{username}
+      operations:
+      - name: listsources
+        method: GET
+        description: List tileset sources for a user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-sources-username-id
+      path: /tilesets/v1/sources/{username}/{id}
+      operations:
+      - name: createsource
+        method: POST
+        description: Create a tileset source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+      - name: getsource
+        method: GET
+        description: Retrieve tileset source information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+      - name: replacesource
+        method: PUT
+        description: Replace a tileset source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+      - name: deletesource
+        method: DELETE
+        description: Delete a tileset source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+        - name: id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-validateRecipe
+      path: /tilesets/v1/validateRecipe
+      operations:
+      - name: validaterecipe
+        method: PUT
+        description: Validate a tileset recipe
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tilesets-v1-tileset_id
+      path: /tilesets/v1/{tileset_id}
+      operations:
+      - name: createtileset
+        method: POST
+        description: Create a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+      - name: updatetileset
+        method: PATCH
+        description: Update a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+      - name: deletetileset
+        method: DELETE
+        description: Delete a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-tileset_id-jobs
+      path: /tilesets/v1/{tileset_id}/jobs
+      operations:
+      - name: listtilesetjobs
+        method: GET
+        description: List jobs for a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-tileset_id-jobs-job_id
+      path: /tilesets/v1/{tileset_id}/jobs/{job_id}
+      operations:
+      - name: gettilesetjob
+        method: GET
+        description: Retrieve a tileset job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+        - name: job_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-tileset_id-publish
+      path: /tilesets/v1/{tileset_id}/publish
+      operations:
+      - name: publishtileset
+        method: POST
+        description: Publish a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-tileset_id-publish-changesets
+      path: /tilesets/v1/{tileset_id}/publish-changesets
+      operations:
+      - name: publishchangesets
+        method: POST
+        description: Publish changesets for a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-tileset_id-recipe
+      path: /tilesets/v1/{tileset_id}/recipe
+      operations:
+      - name: gettilesetrecipe
+        method: GET
+        description: Retrieve a tileset recipe
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+      - name: updatetilesetrecipe
+        method: PATCH
+        description: Update a tileset recipe
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+    - name: tilesets-v1-username
+      path: /tilesets/v1/{username}
+      operations:
+      - name: listtilesets
+        method: GET
+        description: List tilesets for a user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+    - name: v4-tileset_id}.json
+      path: /v4/{tileset_id}.json
+      operations:
+      - name: gettilesettilejson
+        method: GET
+        description: Retrieve TileJSON for a tileset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: tileset_id
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: mapbox-rest
+    port: 8080
+    description: REST adapter for Mapbox Tiling Service API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/activity/v1/{username}/tilesets
+      name: activity-v1-username-tilesets
+      description: REST surface for activity-v1-username-tilesets.
+      operations:
+      - method: GET
+        name: gettilesetactivity
+        description: Retrieve tileset activity for a user
+        call: mapbox.gettilesetactivity
+        with:
+          username: rest.username
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/changesets/{username}
+      name: tilesets-v1-changesets-username
+      description: REST surface for tilesets-v1-changesets-username.
+      operations:
+      - method: GET
+        name: listchangesets
+        description: List changesets for a user
+        call: mapbox.listchangesets
+        with:
+          username: rest.username
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/changesets/{username}/{id}
+      name: tilesets-v1-changesets-username-id
+      description: REST surface for tilesets-v1-changesets-username-id.
+      operations:
+      - method: POST
+        name: createchangeset
+        description: Create a changeset
+        call: mapbox.createchangeset
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacechangeset
+        description: Replace a changeset
+        call: mapbox.replacechangeset
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletechangeset
+        description: Delete a changeset
+        call: mapbox.deletechangeset
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/queue
+      name: tilesets-v1-queue
+      description: REST surface for tilesets-v1-queue.
+      operations:
+      - method: PUT
+        name: getqueuestatus
+        description: Retrieve queue status
+        call: mapbox.getqueuestatus
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/sources/{username}
+      name: tilesets-v1-sources-username
+      description: REST surface for tilesets-v1-sources-username.
+      operations:
+      - method: GET
+        name: listsources
+        description: List tileset sources for a user
+        call: mapbox.listsources
+        with:
+          username: rest.username
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/sources/{username}/{id}
+      name: tilesets-v1-sources-username-id
+      description: REST surface for tilesets-v1-sources-username-id.
+      operations:
+      - method: POST
+        name: createsource
+        description: Create a tileset source
+        call: mapbox.createsource
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getsource
+        description: Retrieve tileset source information
+        call: mapbox.getsource
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacesource
+        description: Replace a tileset source
+        call: mapbox.replacesource
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletesource
+        description: Delete a tileset source
+        call: mapbox.deletesource
+        with:
+          username: rest.username
+          id: rest.id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/validaterecipe
+      name: tilesets-v1-validaterecipe
+      description: REST surface for tilesets-v1-validateRecipe.
+      operations:
+      - method: PUT
+        name: validaterecipe
+        description: Validate a tileset recipe
+        call: mapbox.validaterecipe
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}
+      name: tilesets-v1-tileset-id
+      description: REST surface for tilesets-v1-tileset_id.
+      operations:
+      - method: POST
+        name: createtileset
+        description: Create a tileset
+        call: mapbox.createtileset
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatetileset
+        description: Update a tileset
+        call: mapbox.updatetileset
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletetileset
+        description: Delete a tileset
+        call: mapbox.deletetileset
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}/jobs
+      name: tilesets-v1-tileset-id-jobs
+      description: REST surface for tilesets-v1-tileset_id-jobs.
+      operations:
+      - method: GET
+        name: listtilesetjobs
+        description: List jobs for a tileset
+        call: mapbox.listtilesetjobs
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}/jobs/{job-id}
+      name: tilesets-v1-tileset-id-jobs-job-id
+      description: REST surface for tilesets-v1-tileset_id-jobs-job_id.
+      operations:
+      - method: GET
+        name: gettilesetjob
+        description: Retrieve a tileset job
+        call: mapbox.gettilesetjob
+        with:
+          tileset_id: rest.tileset_id
+          job_id: rest.job_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}/publish
+      name: tilesets-v1-tileset-id-publish
+      description: REST surface for tilesets-v1-tileset_id-publish.
+      operations:
+      - method: POST
+        name: publishtileset
+        description: Publish a tileset
+        call: mapbox.publishtileset
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}/publish-changesets
+      name: tilesets-v1-tileset-id-publish-changesets
+      description: REST surface for tilesets-v1-tileset_id-publish-changesets.
+      operations:
+      - method: POST
+        name: publishchangesets
+        description: Publish changesets for a tileset
+        call: mapbox.publishchangesets
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{tileset-id}/recipe
+      name: tilesets-v1-tileset-id-recipe
+      description: REST surface for tilesets-v1-tileset_id-recipe.
+      operations:
+      - method: GET
+        name: gettilesetrecipe
+        description: Retrieve a tileset recipe
+        call: mapbox.gettilesetrecipe
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updatetilesetrecipe
+        description: Update a tileset recipe
+        call: mapbox.updatetilesetrecipe
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tilesets/v1/{username}
+      name: tilesets-v1-username
+      description: REST surface for tilesets-v1-username.
+      operations:
+      - method: GET
+        name: listtilesets
+        description: List tilesets for a user
+        call: mapbox.listtilesets
+        with:
+          username: rest.username
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v4/tileset-id-json
+      name: v4-tileset-id-json
+      description: REST surface for v4-tileset_id}.json.
+      operations:
+      - method: GET
+        name: gettilesettilejson
+        description: Retrieve TileJSON for a tileset
+        call: mapbox.gettilesettilejson
+        with:
+          tileset_id: rest.tileset_id
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: mapbox-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Mapbox Tiling Service API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: retrieve-tileset-activity-user
+      description: Retrieve tileset activity for a user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.gettilesetactivity
+      with:
+        username: tools.username
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-changesets-user
+      description: List changesets for a user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.listchangesets
+      with:
+        username: tools.username
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-changeset
+      description: Create a changeset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: mapbox.createchangeset
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replace-changeset
+      description: Replace a changeset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.replacechangeset
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-changeset
+      description: Delete a changeset
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: mapbox.deletechangeset
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-queue-status
+      description: Retrieve queue status
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.getqueuestatus
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-tileset-sources-user
+      description: List tileset sources for a user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.listsources
+      with:
+        username: tools.username
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-tileset-source
+      description: Create a tileset source
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: mapbox.createsource
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-tileset-source-information
+      description: Retrieve tileset source information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.getsource
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replace-tileset-source
+      description: Replace a tileset source
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.replacesource
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-tileset-source
+      description: Delete a tileset source
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: mapbox.deletesource
+      with:
+        username: tools.username
+        id: tools.id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: validate-tileset-recipe
+      description: Validate a tileset recipe
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.validaterecipe
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-tileset
+      description: Create a tileset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: mapbox.createtileset
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-tileset
+      description: Update a tileset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.updatetileset
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-tileset
+      description: Delete a tileset
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: mapbox.deletetileset
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-jobs-tileset
+      description: List jobs for a tileset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.listtilesetjobs
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-tileset-job
+      description: Retrieve a tileset job
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.gettilesetjob
+      with:
+        tileset_id: tools.tileset_id
+        job_id: tools.job_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: publish-tileset
+      description: Publish a tileset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: mapbox.publishtileset
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: publish-changesets-tileset
+      description: Publish changesets for a tileset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: mapbox.publishchangesets
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-tileset-recipe
+      description: Retrieve a tileset recipe
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.gettilesetrecipe
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-tileset-recipe
+      description: Update a tileset recipe
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: mapbox.updatetilesetrecipe
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-tilesets-user
+      description: List tilesets for a user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.listtilesets
+      with:
+        username: tools.username
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-tilejson-tileset
+      description: Retrieve TileJSON for a tileset
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mapbox.gettilesettilejson
+      with:
+        tileset_id: tools.tileset_id
+      outputParameters:
+      - type: object
+        mapping: $.
