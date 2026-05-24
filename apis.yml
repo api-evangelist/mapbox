@@ -213,6 +213,8 @@ common:
     sources:
     - https://www.mapbox.com/pricing
     updated: '2026-05-04'
+  - type: LLMsTxt
+    url: https://docs.mapbox.com/llms.txt
 maintainers:
   - FN: API Evangelist
     url: http://apievangelist.com
