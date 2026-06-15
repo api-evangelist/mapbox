@@ -1,0 +1,450 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mapbox Tiling Service API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Retrieve tileset source information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/sources/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve tileset source information"
+    },
+    {
+      "info": {
+        "name": "Create a tileset source",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.mapbox.com/tilesets/v1/sources/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create a tileset source"
+    },
+    {
+      "info": {
+        "name": "Replace a tileset source",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.mapbox.com/tilesets/v1/sources/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Replace a tileset source"
+    },
+    {
+      "info": {
+        "name": "Delete a tileset source",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.mapbox.com/tilesets/v1/sources/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a tileset source"
+    },
+    {
+      "info": {
+        "name": "List tileset sources for a user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/sources/:username",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List tileset sources for a user"
+    },
+    {
+      "info": {
+        "name": "Create a changeset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.mapbox.com/tilesets/v1/changesets/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create a changeset"
+    },
+    {
+      "info": {
+        "name": "Replace a changeset",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.mapbox.com/tilesets/v1/changesets/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Replace a changeset"
+    },
+    {
+      "info": {
+        "name": "Delete a changeset",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.mapbox.com/tilesets/v1/changesets/:username/:id",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a changeset"
+    },
+    {
+      "info": {
+        "name": "List changesets for a user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/changesets/:username",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List changesets for a user"
+    },
+    {
+      "info": {
+        "name": "Create a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create a tileset"
+    },
+    {
+      "info": {
+        "name": "Update a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update a tileset"
+    },
+    {
+      "info": {
+        "name": "Delete a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a tileset"
+    },
+    {
+      "info": {
+        "name": "Publish a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/publish",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Publish a tileset"
+    },
+    {
+      "info": {
+        "name": "Publish changesets for a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/publish-changesets",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Publish changesets for a tileset"
+    },
+    {
+      "info": {
+        "name": "List jobs for a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/jobs",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List jobs for a tileset"
+    },
+    {
+      "info": {
+        "name": "Retrieve a tileset job",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/jobs/:job_id",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "job_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve a tileset job"
+    },
+    {
+      "info": {
+        "name": "Retrieve queue status",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.mapbox.com/tilesets/v1/queue"
+      },
+      "docs": "Retrieve queue status"
+    },
+    {
+      "info": {
+        "name": "Validate a tileset recipe",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.mapbox.com/tilesets/v1/validateRecipe"
+      },
+      "docs": "Validate a tileset recipe"
+    },
+    {
+      "info": {
+        "name": "Retrieve a tileset recipe",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/recipe",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve a tileset recipe"
+    },
+    {
+      "info": {
+        "name": "Update a tileset recipe",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "https://api.mapbox.com/tilesets/v1/:tileset_id/recipe",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update a tileset recipe"
+    },
+    {
+      "info": {
+        "name": "List tilesets for a user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/tilesets/v1/:username",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List tilesets for a user"
+    },
+    {
+      "info": {
+        "name": "Retrieve TileJSON for a tileset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/v4/:tileset_id.json",
+        "params": [
+          {
+            "name": "tileset_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve TileJSON for a tileset"
+    },
+    {
+      "info": {
+        "name": "Retrieve tileset activity for a user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.mapbox.com/activity/v1/:username/tilesets",
+        "params": [
+          {
+            "name": "username",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve tileset activity for a user"
+    }
+  ],
+  "bundled": true
+}
