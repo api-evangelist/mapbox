@@ -167,7 +167,7 @@ common:
     url: https://www.linkedin.com/company/mapbox
   - type: Support
     url: https://docs.mapbox.com/help/
-  - type: SDK
+  - type: SDKs
     url: https://docs.mapbox.com/api/overview/#sdk-and-library-support
   - type: Authentication
     url: https://docs.mapbox.com/api/overview/#access-tokens-and-token-scopes
@@ -181,7 +181,7 @@ common:
     url: https://docs.mapbox.com/api/overview/#pagination
   - type: Login
     url: https://account.mapbox.com/auth/signin/
-  - type: SignUp
+  - type: Signup
     url: https://account.mapbox.com/auth/signup/
   - type: TermsOfService
     url: https://www.mapbox.com/tos/
@@ -223,7 +223,7 @@ common:
     sources:
       - https://www.mapbox.com/pricing
     updated: '2026-05-04'
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.mapbox.com/llms.txt
 maintainers:
   - FN: API Evangelist
