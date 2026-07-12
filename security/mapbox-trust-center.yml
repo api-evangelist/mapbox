@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.mapbox.com/
+url: https://trust.mapbox.com/
+certifications:
+- SOC 2
+- ISO 27001
+- HIPAA
+- FedRAMP
+- GDPR
+- CSA STAR
+evidence:
+- source: https://trust.mapbox.com/
+  keywords:
+  - soc 2
+  - soc2
+  - hipaa
+  - fedramp
+  - trust center
+  - gdpr
+  - csa star

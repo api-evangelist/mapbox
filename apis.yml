@@ -161,6 +161,10 @@ apis:
       - type: Documentation
         url: https://docs.mapbox.com/api/maps/fonts/
 common:
+  - type: TrustCenter
+    url: security/mapbox-trust-center.yml
+  - type: DomainSecurity
+    url: security/mapbox-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/mapbox
   - type: LinkedIn
@@ -225,6 +229,8 @@ common:
     updated: '2026-05-04'
   - type: LlmsText
     url: https://docs.mapbox.com/llms.txt
+  - url: https://www.mapbox.com/blog
+    type: Blog
 maintainers:
   - FN: API Evangelist
     url: http://apievangelist.com
