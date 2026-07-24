@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Mapbox Tiling Service Activity API
+  description: Minimal OpenAPI 3.1 specification for the Mapbox Tiling Service, covering tileset sources, changesets, tilesets, jobs, recipes, queue, validation, and activity endpoints.
+  version: 1.0.0
+servers:
+- url: https://api.mapbox.com
+  description: Mapbox API
+tags:
+- name: Activity
+paths:
+  /activity/v1/{username}/tilesets:
+    get:
+      operationId: getTilesetActivity
+      summary: Retrieve tileset activity for a user
+      parameters:
+      - name: username
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Activity report
+        default:
+          description: Error response
+      tags:
+      - Activity
+x-generated-from: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+x-generated-by: claude-crawl-2026-05-08
