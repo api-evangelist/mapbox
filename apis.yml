@@ -5,7 +5,19 @@ description: >-
   businesses create custom maps, visualize geospatial data, and build location-aware applications. Their platform offers
   a wide range of mapping technologies, from interactive maps and map design tools to geocoding and routing services.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mapbox.png
 access: 3rd-Party
 position: Consuming
 tags:
@@ -18,148 +30,169 @@ created: '2023-11-22'
 modified: '2026-05-30'
 specificationVersion: '0.20'
 apis:
-  - aid: mapbox:mapbox-tiling-service
-    name: Mapbox Tiling Service
-    description: >-
-      Mapbox Tiling Service (MTS) is a tool for creating vector tilesets. With MTS, you use sets of configuration
-      options (tileset recipes) to transform your geospatial data into vector tiles. The resulting tiles are hosted on
-      Mapbox servers for use in your applications.
-    humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Tiles
-      - Vector Tiles
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
-      - type: OpenAPI
-        url: openapi/mapbox-openapi.yml
-  - aid: mapbox:vector-tiles-api
-    name: Mapbox Vector Tiles API
-    description: The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector tilesets.
-    humanURL: https://docs.mapbox.com/api/maps/vector-tiles/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Tiles
-      - Vector Tiles
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/vector-tiles/
-  - aid: mapbox:mapbox-raster-tiles-api
-    name: Mapbox Raster Tiles API
-    description: >-
-      The Mapbox Raster Tiles API serves raster tiles generated from satellite imagery tilesets and tilesets generated
-      from raster data uploaded to Mapbox.com.
-    humanURL: https://docs.mapbox.com/api/maps/raster-tiles/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Tiles
-      - Raster Tiles
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/raster-tiles/
-  - aid: mapbox:mapbox-static-images-api
-    name: Mapbox Static Images API
-    description: >-
-      The Mapbox Static Images API serves standalone, static map images generated from Mapbox Studio styles. These
-      images can be displayed on web and mobile devices without the aid of a mapping library or API.
-    humanURL: https://docs.mapbox.com/api/maps/static-images/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Static Images
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/static-images/
-  - aid: mapbox:mapbox-static-tiles-api
-    name: Mapbox Static Tiles API
-    description: >-
-      The Mapbox Static Tiles API serves raster tiles generated from Mapbox Studio styles. Raster tiles can be used in
-      traditional web mapping libraries like Mapbox.js, Leaflet, OpenLayers, and others to create interactive slippy
-      maps.
-    humanURL: https://docs.mapbox.com/api/maps/static-tiles/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Tiles
-      - Static Tiles
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/static-tiles/
-  - aid: mapbox:mapbox-styles-api
-    name: Mapbox Styles API
-    description: >-
-      The Mapbox Styles API lets you read and change map styles, fonts, and images. This API is the basis for Mapbox
-      Studio.
-    humanURL: https://docs.mapbox.com/api/maps/styles/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Styles
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/styles/
-  - aid: mapbox:mapbox-tilequery-api
-    name: Mapbox Tilequery API
-    description: >-
-      The Mapbox Tilequery API allows you to retrieve data about specific features from a vector tileset, based on a
-      given latitude and longitude. The Tilequery API makes it possible to query for features within a radius, do
-      point-in-polygon queries, query for features in multiple composite layers, and augment data from the Mapbox
-      Geocoding API with custom data.
-    humanURL: https://docs.mapbox.com/api/maps/tilequery/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Tile Query
-      - Geospatial
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/tilequery/
-  - aid: mapbox:mapbox-uploads-api
-    name: Mapbox Uploads API
-    description: >-
-      The Mapbox Uploads API transforms geographic data into tilesets that can be used with maps and geographic
-      applications. Given a wide variety of geospatial formats, it normalizes projections and generates tiles at
-      multiple zoom levels to make data viewable on the web.
-    humanURL: https://docs.mapbox.com/api/maps/uploads/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Uploads
-      - Geospatial
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/uploads/
-  - aid: mapbox:mapbox-datasets-api
-    name: Mapbox Datasets API
-    description: >-
-      The Mapbox Datasets API supports reading, creating, updating, and removing features from a dataset. Datasets
-      contain one or more collections of GeoJSON features.
-    humanURL: https://docs.mapbox.com/api/maps/datasets/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Datasets
-      - GeoJSON
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/datasets/
-  - aid: mapbox:mapbox-fonts-api
-    name: Mapbox Fonts API
-    description: >-
-      The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts to be deleted, and generates encoded
-      letters for map renderers. Two types of fonts are supported: TrueType fonts (.ttf) and OpenType fonts (.otf).
-    humanURL: https://docs.mapbox.com/api/maps/fonts/
-    baseURL: https://api.mapbox.com
-    tags:
-      - Mapping
-      - Fonts
-    properties:
-      - type: Documentation
-        url: https://docs.mapbox.com/api/maps/fonts/
+- aid: mapbox:vector-tiles-api
+  name: Mapbox Vector Tiles API
+  description: The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector tilesets.
+  humanURL: https://docs.mapbox.com/api/maps/vector-tiles/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Tiles
+  - Vector Tiles
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/vector-tiles/
+- aid: mapbox:mapbox-raster-tiles-api
+  name: Mapbox Raster Tiles API
+  description: >-
+    The Mapbox Raster Tiles API serves raster tiles generated from satellite imagery tilesets and tilesets
+    generated from raster data uploaded to Mapbox.com.
+  humanURL: https://docs.mapbox.com/api/maps/raster-tiles/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Tiles
+  - Raster Tiles
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/raster-tiles/
+- aid: mapbox:mapbox-static-images-api
+  name: Mapbox Static Images API
+  description: >-
+    The Mapbox Static Images API serves standalone, static map images generated from Mapbox Studio styles.
+    These images can be displayed on web and mobile devices without the aid of a mapping library or API.
+  humanURL: https://docs.mapbox.com/api/maps/static-images/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Static Images
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/static-images/
+- aid: mapbox:mapbox-static-tiles-api
+  name: Mapbox Static Tiles API
+  description: >-
+    The Mapbox Static Tiles API serves raster tiles generated from Mapbox Studio styles. Raster tiles
+    can be used in traditional web mapping libraries like Mapbox.js, Leaflet, OpenLayers, and others to
+    create interactive slippy maps.
+  humanURL: https://docs.mapbox.com/api/maps/static-tiles/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Tiles
+  - Static Tiles
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/static-tiles/
+- aid: mapbox:mapbox-styles-api
+  name: Mapbox Styles API
+  description: >-
+    The Mapbox Styles API lets you read and change map styles, fonts, and images. This API is the basis
+    for Mapbox Studio.
+  humanURL: https://docs.mapbox.com/api/maps/styles/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Styles
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/styles/
+- aid: mapbox:mapbox-tilequery-api
+  name: Mapbox Tilequery API
+  description: >-
+    The Mapbox Tilequery API allows you to retrieve data about specific features from a vector tileset,
+    based on a given latitude and longitude. The Tilequery API makes it possible to query for features
+    within a radius, do point-in-polygon queries, query for features in multiple composite layers, and
+    augment data from the Mapbox Geocoding API with custom data.
+  humanURL: https://docs.mapbox.com/api/maps/tilequery/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Tile Query
+  - Geospatial
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/tilequery/
+- aid: mapbox:mapbox-uploads-api
+  name: Mapbox Uploads API
+  description: >-
+    The Mapbox Uploads API transforms geographic data into tilesets that can be used with maps and geographic
+    applications. Given a wide variety of geospatial formats, it normalizes projections and generates
+    tiles at multiple zoom levels to make data viewable on the web.
+  humanURL: https://docs.mapbox.com/api/maps/uploads/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Uploads
+  - Geospatial
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/uploads/
+- aid: mapbox:mapbox-datasets-api
+  name: Mapbox Datasets API
+  description: >-
+    The Mapbox Datasets API supports reading, creating, updating, and removing features from a dataset.
+    Datasets contain one or more collections of GeoJSON features.
+  humanURL: https://docs.mapbox.com/api/maps/datasets/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Datasets
+  - GeoJSON
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/datasets/
+- aid: mapbox:mapbox-fonts-api
+  name: Mapbox Fonts API
+  description: >-
+    The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts to be deleted, and generates
+    encoded letters for map renderers. Two types of fonts are supported: TrueType fonts (.ttf) and OpenType
+    fonts (.otf).
+  humanURL: https://docs.mapbox.com/api/maps/fonts/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapping
+  - Fonts
+  properties:
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/fonts/
+- aid: mapbox:mapbox-activity-api
+  name: Mapbox Activity API
+  description: The Activity API from Mapbox — 1 operation(s) for activity.
+  humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Activity
+  properties:
+  - type: OpenAPI
+    url: openapi/mapbox-activity-api-openapi.yml
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+- aid: mapbox:mapbox-mapbox-tiling-service-api-api
+  name: Mapbox Mapbox Tiling Service API API
+  description: >-
+    The Mapbox Tiling Service API API from Mapbox — 1 operation(s) for mapbox tiling service api.
+  humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Mapbox Tiling Service API
+  properties:
+  - type: OpenAPI
+    url: openapi/mapbox-mapbox-tiling-service-api-api-openapi.yml
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+- aid: mapbox:mapbox-tilesets-api
+  name: Mapbox Tilesets API
+  description: The Tilesets API from Mapbox — 13 operation(s) for tilesets.
+  humanURL: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
+  baseURL: https://api.mapbox.com
+  tags:
+  - Tilesets
+  properties:
+  - type: OpenAPI
+    url: openapi/mapbox-tilesets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
 common:
   - type: AgenticAccess
     url: agentic-access/mapbox-agentic-access.yml
