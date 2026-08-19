@@ -28,7 +28,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/apis.yml
 created: '2023-11-22'
 modified: '2026-05-30'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 apis:
 - aid: mapbox:vector-tiles-api
   name: Mapbox Vector Tiles API
