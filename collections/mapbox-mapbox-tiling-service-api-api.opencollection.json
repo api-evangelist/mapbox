@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mapbox Tiling Service Activity Mapbox Tiling Service API API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mapbox Tiling Service API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve TileJSON for a tileset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mapbox.com/v4/:tileset_id.json",
+            "params": [
+              {
+                "name": "tileset_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve TileJSON for a tileset"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
