@@ -1,0 +1,1 @@
+{"resource":"https://mcp.mapbox.com/mcp","authorization_servers":["https://mcp.mapbox.com"],"scopes_supported":["styles:tiles","styles:read","fonts:read","datasets:read","tokens:read"],"bearer_methods_supported":["header"],"resource_signing_alg_values_supported":["RS256"],"resource_documentation":"https://mcp.mapbox.com/docs/mcp"}

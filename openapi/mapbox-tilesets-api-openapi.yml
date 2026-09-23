@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Mapbox Tiling Service Activity Tilesets API
+  title: Mapbox Tiling Service Tilesets API
   description: Minimal OpenAPI 3.1 specification for the Mapbox Tiling Service, covering tileset sources, changesets, tilesets, jobs, recipes, queue, validation, and activity endpoints.
   version: 1.0.0
 servers:

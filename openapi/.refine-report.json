@@ -1,9 +1,7 @@
 {
   "provider": "mapbox",
   "sources": [
-    "mapbox-activity-api-openapi.yml",
-    "mapbox-mapbox-tiling-service-api-api-openapi.yml",
-    "mapbox-tilesets-api-openapi.yml"
+    "_ae-authored/mapbox-openapi.yml"
   ],
   "outputs": [
     "mapbox-activity-api-openapi.yml",
@@ -13,6 +11,40 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mapbox-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mapbox-openapi.yml: tagged paths POST /tilesets/v1/sources/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/sources/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PUT /tilesets/v1/sources/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths DELETE /tilesets/v1/sources/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/sources/{username} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths POST /tilesets/v1/changesets/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PUT /tilesets/v1/changesets/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths DELETE /tilesets/v1/changesets/{username}/{id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/changesets/{username} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths POST /tilesets/v1/{tileset_id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PATCH /tilesets/v1/{tileset_id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths DELETE /tilesets/v1/{tileset_id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths POST /tilesets/v1/{tileset_id}/publish -> Tilesets",
+    "mapbox-openapi.yml: tagged paths POST /tilesets/v1/{tileset_id}/publish-changesets -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/{tileset_id}/jobs -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/{tileset_id}/jobs/{job_id} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PUT /tilesets/v1/queue -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PUT /tilesets/v1/validateRecipe -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/{tileset_id}/recipe -> Tilesets",
+    "mapbox-openapi.yml: tagged paths PATCH /tilesets/v1/{tileset_id}/recipe -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /tilesets/v1/{username} -> Tilesets",
+    "mapbox-openapi.yml: tagged paths GET /v4/{tileset_id}.json -> Mapbox Tiling Service API",
+    "mapbox-openapi.yml: tagged paths GET /activity/v1/{username}/tilesets -> Activity",
+    "mapbox-openapi.yml: declared missing tag: Activity",
+    "mapbox-openapi.yml: declared missing tag: Mapbox Tiling Service API",
+    "mapbox-openapi.yml: declared missing tag: Tilesets",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "mapbox-activity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mapbox-mapbox-tiling-service-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mapbox-tilesets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
