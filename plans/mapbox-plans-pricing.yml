@@ -235,3 +235,80 @@ plans:
     elements:
       - name: Free up to 10 MAUs
       - name: Volume committed pricing
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - active-user
+  - object
+  - request
+  plans:
+  - name: Maps SDKs for Mobile
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - active-user
+    periods:
+    - month
+  - name: Mapbox GL JS Map Loads
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - other
+    periods:
+    - month
+  - name: Static Images API
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - request
+    periods:
+    - month
+  - name: Directions API
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - request
+    periods:
+    - month
+  - name: Temporary Geocoding API
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - request
+    periods:
+    - month
+  - name: Search Box API (Sessions)
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - object
+    periods:
+    - month
+  - name: Navigation SDK v3 — Metered Trips
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - active-user
+    - other
+    periods:
+    - month
+    - per-use
+  - name: Navigation SDK v3 — Unlimited Trips
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - active-user
+    periods:
+    - month
