@@ -204,6 +204,10 @@ apis:
   - type: Documentation
     url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
 common:
+- type: Plans
+  url: plans/mapbox-plans-pricing.yml
+- type: FinOps
+  url: finops/mapbox-finops.yml
 - type: AgenticAccess
   url: agentic-access/mapbox-agentic-access.yml
 - type: TrustCenter
