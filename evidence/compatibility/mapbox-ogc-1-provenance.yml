@@ -1,0 +1,13 @@
+fetched: '2026-10-14'
+method: fetched
+source: https://docs.mapbox.com/api/maps/static-tiles/
+page: https://docs.mapbox.com/api/maps/static-tiles/
+file: mapbox-ogc-1.md
+bytes: 8552
+sha256: 90fca8340da3178b97f31be97670fa753c5f40705d70fe56d3a381c3e2ec91b9
+anchor: ogc
+shape: ogc
+shapes_declared: []
+classification: no-compatibility-statement
+quote: null
+note: text extracted from the provider's own page (tags stripped), saved for evidence
