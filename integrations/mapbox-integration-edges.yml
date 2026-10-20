@@ -2,11 +2,47 @@ generated: '2026-10-14'
 method: searched
 checked:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+- https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/
 - https://registry.modelcontextprotocol.io/v0/servers
 - okta/integrations/okta-integration-edges.yml
+- tableau/integrations/tableau-integration-edges.yml
 source:
 - okta/integrations/okta-integration-edges.yml
 edges:
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mapbox
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: io.github.mapbox/mcp-devkit-server
+    register_id: io.github.mapbox/mcp-devkit-server
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-19'
+  mcp_registry:
+    servers:
+    - io.github.mapbox/mcp-devkit-server
+    - io.github.mapbox/mcp-docs-server
+    - io.github.mapbox/mcp-server
+    hosted_remote: 3
+    local_package: 3
+    transports:
+      stdio: 3
+      streamable-http: 3
+    auth_declared: 2
+    catalog_declared: true
+    namespace_domains:
+    - mapbox.com
+  matched_by:
+  - remote-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 - partner_name: Okta (own)
   partner: okta
   partner_match: mirror
@@ -29,40 +65,23 @@ edges:
   features:
   - SAML
   - SWA
-- partner_name: MCP Registry
-  partner: mcp
-  partner_match: register
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mapbox
-  contract_reference:
-    register: registry.modelcontextprotocol.io
-    spec_file: null
-    role: mcp-server-listing
-    registered_name: io.github.mapbox/mcp-devkit-server
-    register_id: io.github.mapbox/mcp-devkit-server
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
-  mcp_registry:
-    servers:
-    - io.github.mapbox/mcp-devkit-server
-    - io.github.mapbox/mcp-docs-server
-    - io.github.mapbox/mcp-server
-    hosted_remote: 3
-    local_package: 3
-    transports:
-      stdio: 3
-      streamable-http: 3
-    auth_declared: 2
-    catalog_declared: true
-    namespace_domains:
-    - mapbox.com
-  matched_by:
-  - remote-domain
-  detected_by: sweep-agent-tools.py
-  first_seen: '2026-10-14'
+- partner_name: Tableau (own)
+  partner: tableau
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://exchange.tableau.com/products/41
+  mirror_of: tableau/integrations/tableau-integration-edges.yml
+  apps:
+  - Mapbox Geospatial Analytics
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: extension
 - partner_name: Pipedream
   partner: pipedream
   partner_match: aggregator
@@ -71,7 +90,7 @@ edges:
   channel: open-source-node
   relationship: ipaas-bridge
   direction: third-party
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/mapbox
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/mapbox
   category: null
   contract_reference:
     register: Pipedream components (PipedreamHQ/pipedream components/)
