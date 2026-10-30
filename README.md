@@ -1,4 +1,4 @@
-# Mapbox (mapbox)
+# Mapbox
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,244 +66,140 @@
 
 Mapbox is a leading mapping and location data platform that provides tools and services to help developers and businesses create custom maps, visualize geospatial data, and build location-aware applications. Their platform offers a wide range of mapping technologies, from interactive maps and map design tools to geocoding and routing services.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/apis.yml)
+**Areas:** Mapping · Maps · Geospatial · Location · Geocoding · Routing
 
-## Scope
+## Mapbox on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Mapbox is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mapbox/](https://apis.io/providers/mapbox/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (12)
 
-- Mapping
-- Maps
-- Geospatial
-- Location
+- [Mapbox Vector Tiles API](https://apis.io/apis/mapbox/vector-tiles-api/) — The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector tilesets.
+- [Mapbox Raster Tiles API](https://apis.io/apis/mapbox/mapbox-raster-tiles-api/) — The Mapbox Raster Tiles API serves raster tiles generated from satellite imagery tilesets and tilesets generated from raster data uploaded to Mapbox.com.
+- [Mapbox Static Images API](https://apis.io/apis/mapbox/mapbox-static-images-api/) — The Mapbox Static Images API serves standalone, static map images generated from Mapbox Studio styles. These images can be displayed on web and mobile…
+- [Mapbox Static Tiles API](https://apis.io/apis/mapbox/mapbox-static-tiles-api/) — The Mapbox Static Tiles API serves raster tiles generated from Mapbox Studio styles. Raster tiles can be used in traditional web mapping libraries like…
+- [Mapbox Styles API](https://apis.io/apis/mapbox/mapbox-styles-api/) — The Mapbox Styles API lets you read and change map styles, fonts, and images. This API is the basis for Mapbox Studio.
+- [Mapbox Tilequery API](https://apis.io/apis/mapbox/mapbox-tilequery-api/) — The Mapbox Tilequery API allows you to retrieve data about specific features from a vector tileset, based on a given latitude and longitude. The Tilequery…
+- [Mapbox Uploads API](https://apis.io/apis/mapbox/mapbox-uploads-api/) — The Mapbox Uploads API transforms geographic data into tilesets that can be used with maps and geographic applications. Given a wide variety of geospatial…
+- [Mapbox Datasets API](https://apis.io/apis/mapbox/mapbox-datasets-api/) — The Mapbox Datasets API supports reading, creating, updating, and removing features from a dataset. Datasets contain one or more collections of GeoJSON…
+- [Mapbox Fonts API](https://apis.io/apis/mapbox/mapbox-fonts-api/) — The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts to be deleted, and generates encoded letters for map renderers. Two types of fonts…
+- [Mapbox Activity API](https://apis.io/apis/mapbox/mapbox-activity-api/) — The Activity API from Mapbox — 1 operation(s) for activity.
+- [Mapbox Tiling Service API](https://apis.io/apis/mapbox/mapbox-mapbox-tiling-service-api-api/) — The Mapbox Tiling Service API API from Mapbox — 1 operation(s) for mapbox tiling service api.
+- [Mapbox Tilesets API](https://apis.io/apis/mapbox/mapbox-tilesets-api/) — The Tilesets API from Mapbox — 13 operation(s) for tilesets.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2023-11-22
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Mapbox Tiling Service
+Model Context Protocol servers that expose the API to agents.
 
-Mapbox Tiling Service (MTS) is a tool for creating vector tilesets. With MTS, you use sets of configuration options (tileset recipes) to transform your geospatial data into vector tiles. The resulting tiles are hosted on Mapbox servers for use in your applications.
+- [mapbox](https://apis.io/servers/mapbox/mapbox/)
 
-- **Human URL:** [https://docs.mapbox.com/api/maps/mapbox-tiling-service/](https://docs.mapbox.com/api/maps/mapbox-tiling-service/)
-- **Base URL:** `https://api.mapbox.com`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Mapping
-- Tiles
-- Vector Tiles
+- [Mapbox Agentic Access](https://apis.io/agentic-access/mapbox/mapbox-agentic-access/)
 
-#### Properties
+#### Collections (4)
 
-- [Documentation](https://docs.mapbox.com/api/maps/mapbox-tiling-service/)
-- [OpenAPI](openapi/mapbox-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Mapbox Vector Tiles API
+- [Mapbox Tiling Service API](https://apis.io/collections/mapbox/open-mapbox/)
+- [Mapbox Tiling Service Activity API](https://apis.io/collections/mapbox/open-mapbox-activity-api/)
+- [Mapbox Tiling Service Activity Mapbox Tiling Service API API](https://apis.io/collections/mapbox/open-mapbox-mapbox-tiling-service-api-api/)
+- [Mapbox Tiling Service Activity Tilesets API](https://apis.io/collections/mapbox/open-mapbox-tilesets-api/)
 
-The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector tilesets.
+#### Security (2)
 
-- **Human URL:** [https://docs.mapbox.com/api/maps/vector-tiles/](https://docs.mapbox.com/api/maps/vector-tiles/)
-- **Base URL:** `https://api.mapbox.com`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Mapbox Domain Security](https://apis.io/security/mapbox/mapbox-domain-security/)
+- [Mapbox Trust Center](https://apis.io/security/mapbox/mapbox-trust-center/)
 
-- Mapping
-- Tiles
-- Vector Tiles
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://docs.mapbox.com/api/maps/vector-tiles/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Mapbox Plans Pricing](https://apis.io/plans/mapbox/mapbox-plans-pricing/)
 
-### Mapbox Raster Tiles API
+#### Rate limits (1)
 
-The Mapbox Raster Tiles API serves raster tiles generated from satellite imagery tilesets and tilesets generated from raster data uploaded to Mapbox.com.
+Published request limits.
 
-- **Human URL:** [https://docs.mapbox.com/api/maps/raster-tiles/](https://docs.mapbox.com/api/maps/raster-tiles/)
-- **Base URL:** `https://api.mapbox.com`
+- [Mapbox Rate Limits](https://apis.io/rate-limits/mapbox/mapbox-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Mapping
-- Tiles
-- Raster Tiles
+What the API costs to run, by operation.
 
-#### Properties
+- [Mapbox Finops](https://apis.io/finops/mapbox/mapbox-finops/)
 
-- [Documentation](https://docs.mapbox.com/api/maps/raster-tiles/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Mapbox Static Images API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-The Mapbox Static Images API serves standalone, static map images generated from Mapbox Studio styles. These images can be displayed on web and mobile devices without the aid of a mapping library or API.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/static-images/](https://docs.mapbox.com/api/maps/static-images/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Static Images
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/static-images/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Static Tiles API
-
-The Mapbox Static Tiles API serves raster tiles generated from Mapbox Studio styles. Raster tiles can be used in traditional web mapping libraries like Mapbox.js, Leaflet, OpenLayers, and others to create interactive slippy maps.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/static-tiles/](https://docs.mapbox.com/api/maps/static-tiles/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Tiles
-- Static Tiles
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/static-tiles/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Styles API
-
-The Mapbox Styles API lets you read and change map styles, fonts, and images. This API is the basis for Mapbox Studio.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/styles/](https://docs.mapbox.com/api/maps/styles/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Styles
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/styles/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Tilequery API
-
-The Mapbox Tilequery API allows you to retrieve data about specific features from a vector tileset, based on a given latitude and longitude. The Tilequery API makes it possible to query for features within a radius, do point-in-polygon queries, query for features in multiple composite layers, and augment data from the Mapbox Geocoding API with custom data.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/tilequery/](https://docs.mapbox.com/api/maps/tilequery/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Tile Query
-- Geospatial
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/tilequery/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Uploads API
-
-The Mapbox Uploads API transforms geographic data into tilesets that can be used with maps and geographic applications. Given a wide variety of geospatial formats, it normalizes projections and generates tiles at multiple zoom levels to make data viewable on the web.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/uploads/](https://docs.mapbox.com/api/maps/uploads/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Uploads
-- Geospatial
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/uploads/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Datasets API
-
-The Mapbox Datasets API supports reading, creating, updating, and removing features from a dataset. Datasets contain one or more collections of GeoJSON features.
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/datasets/](https://docs.mapbox.com/api/maps/datasets/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Datasets
-- GeoJSON
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/datasets/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Mapbox Fonts API
-
-The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts to be deleted, and generates encoded letters for map renderers. Two types of fonts are supported: TrueType fonts (.ttf) and OpenType fonts (.otf).
-
-- **Human URL:** [https://docs.mapbox.com/api/maps/fonts/](https://docs.mapbox.com/api/maps/fonts/)
-- **Base URL:** `https://api.mapbox.com`
-
-#### Tags
-
-- Mapping
-- Fonts
-
-#### Properties
-
-- [Documentation](https://docs.mapbox.com/api/maps/fonts/)
-- [Postman Collection](collections/mapbox.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mapbox.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/mapbox)
-- [LinkedIn](https://www.linkedin.com/company/mapbox)
-- [Support](https://docs.mapbox.com/help/)
-- [SDK](https://docs.mapbox.com/api/overview/#sdk-and-library-support)
-- [Authentication](https://docs.mapbox.com/api/overview/#access-tokens-and-token-scopes)
-- [Versioning](https://docs.mapbox.com/api/overview/#api-versioning)
-- [Rate Limits](https://docs.mapbox.com/api/overview/#rate-limits)
-- [C O R S](https://docs.mapbox.com/api/overview/#https-and-cors)
-- [Pagination](https://docs.mapbox.com/api/overview/#pagination)
-- [Login](https://account.mapbox.com/auth/signin/)
-- [Sign Up](https://account.mapbox.com/auth/signup/)
-- [Terms of Service](https://www.mapbox.com/tos/)
-- [Privacy](https://www.mapbox.com/privacy/)
-- [Security](https://www.mapbox.com/platform/security/)
-- [Cheatsheet](https://labs.mapbox.com/developer-cheatsheet/)
-- [Getting Started](https://docs.mapbox.com/help/getting-started)
-- [Tutorials](https://docs.mapbox.com/help/tutorials)
-- [Videos](https://docs.mapbox.com/help/how-to-videos)
-- [Troubleshooting](https://docs.mapbox.com/help/troubleshooting)
-- [Glossary](https://docs.mapbox.com/help/glossary)
 - [Website](https://www.mapbox.com/)
-- [Features](undefined)
-- [L L Ms Txt](https://docs.mapbox.com/llms.txt)
+- [Getting started](https://docs.mapbox.com/help/getting-started)
+- [Support](https://docs.mapbox.com/help/)
+- [Blog](https://www.mapbox.com/blog)
+- [Security](https://www.mapbox.com/platform/security/)
+- [Terms of service](https://www.mapbox.com/tos/)
+- [GitHub](https://github.com/mapbox)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** API Evangelist
-**Email:** info@apievangelist.com
-**URL:** http://apievangelist.com
+**Kin Score 41.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.0 |
+| Contract quality | 38.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 43.4 |
+
+**Agent readiness 45.8** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mapbox/](https://apis.io/providers/mapbox/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mapbox: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mapbox/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
